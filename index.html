@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>APT Online Daily Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Particles -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #fff;
+    }
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .container {
+      text-align: center;
+      margin-top: 30px;
+      z-index: 1;
+      position: relative;
+    }
+    .container img {
+      width: 70px;
+    }
+    .container h1 {
+      color: #ff4d4d;
+      font-size: 2rem;
+      margin: 10px 0;
+    }
+    form {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      width: 90%;
+      margin: 20px auto;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+    .input-group {
+      margin: 15px 0;
+      position: relative;
+    }
+    .input-group i {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: lightgray;
+    }
+    .input-group input {
+      width: 100%;
+      padding: 10px 10px 10px 35px;
+      border: none;
+      border-radius: 5px;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+    .input-group select {
+      width: 100%;
+      padding: 10px 10px 10px 35px;
+      border: none;
+      border-radius: 5px;
+      background: #fff;
+      color: #000;
+    }
+    .input-group select option {
+      color: #000;
+      background-color: #fff;
+    }
+    .input-group input::placeholder {
+      color: #ccc;
+    }
+    h3 {
+      text-align: left;
+      font-size: 1rem;
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    @media (max-width: 480px) {
+      .container h1 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="particles-js"></div>
+<div class="container">
+  <img src="https://apt.shiksha/_next/image?url=%2Fimages%2Flogo-dark.png&w=256&q=75" alt="APT Logo">
+  <h1>APT Online Daily Test</h1>
+</div>
+
+<form id="myForm">
+  <!-- Basic Info -->
+  <div class="input-group"><i class="fa-solid fa-user"></i>
+    <input type="text" name="name" placeholder="Name" required>
+  </div>
+  <div class="input-group"><i class="fa-solid fa-envelope"></i>
+    <input type="email" name="email" placeholder="Email" required>
+  </div>
+  <div class="input-group"><i class="fa-solid fa-id-badge"></i>
+    <input type="text" name="roll" placeholder="Roll No" required>
+  </div>
+  <div class="input-group"><i class="fa-solid fa-users"></i>
+    <input type="text" name="batch" placeholder="Batch" required>
+  </div>
+  <div class="input-group"><i class="fa-solid fa-book"></i>
+    <input type="text" name="subject" placeholder="Subject" required>
+  </div>
+  <div class="input-group"><i class="fa-solid fa-calendar-days"></i>
+    <input type="date" name="testDate" required>
+  </div>
+
+  <!-- MCQ Questions -->
+  <h3>Q1. What is the capital of France?</h3>
+  <div class="input-group">
+    <select name="q1" required>
+      <option value="">Select</option>
+      <option value="Paris">Paris</option>
+      <option value="London">London</option>
+      <option value="Berlin">Berlin</option>
+      <option value="Rome">Rome</option>
+    </select>
+  </div>
+
+  <h3>Q2. What is 2 + 2?</h3>
+  <div class="input-group">
+    <select name="q2" required>
+      <option value="">Select</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
+  </div>
+
+  <h3>Q3. Largest planet in solar system?</h3>
+  <div class="input-group">
+    <select name="q3" required>
+      <option value="">Select</option>
+      <option value="Mars">Mars</option>
+      <option value="Earth">Earth</option>
+      <option value="Venus">Venus</option>
+      <option value="Jupiter">Jupiter</option>
+    </select>
+  </div>
+
+  <h3>Q4. H₂O is the chemical formula for?</h3>
+  <div class="input-group">
+    <select name="q4" required>
+      <option value="">Select</option>
+      <option value="Water">Water</option>
+      <option value="Oxygen">Oxygen</option>
+      <option value="Hydrogen">Hydrogen</option>
+      <option value="Helium">Helium</option>
+    </select>
+  </div>
+
+  <h3>Q5. Speed of light in vacuum?</h3>
+  <div class="input-group">
+    <select name="q5" required>
+      <option value="">Select</option>
+      <option value="300 km/s">300 km/s</option>
+      <option value="300000 km/s">300000 km/s</option>
+      <option value="30000 km/s">30000 km/s</option>
+      <option value="3000 km/s">3000 km/s</option>
+    </select>
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 60, density: { enable: true, value_area: 800 } },
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.2, random: true },
+      size: { value: 3, random: true },
+      move: { enable: true, speed: 1, direction: "bottom", random: false }
+    }
+  });
+
+  document.getElementById("myForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const form = e.target;
+
+    Swal.fire({
+      title: "Submit your answers?",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonText: "Yes, Submit",
+      cancelButtonText: "Cancel"
+    }).then(result => {
+      if (!result.isConfirmed) return;
+
+      const correct = {
+        q1: "Paris",
+        q2: "4",
+        q3: "Jupiter",
+        q4: "Water",
+        q5: "300000 km/s"
+      };
+
+      let score = 0;
+      Object.keys(correct).forEach(q => {
+        if (form[q].value === correct[q]) score++;
+      });
+
+      const data = new FormData();
+      data.append("entry.63099624", form.name.value);
+      data.append("entry.702060442", form.email.value);
+      data.append("entry.1438069615", form.roll.value);
+      data.append("entry.875377683", form.batch.value);
+      data.append("entry.1455828183", form.subject.value);
+      data.append("entry.2007988952", form.testDate.value);
+      data.append("entry.506266597", form.q1.value);
+      data.append("entry.1055527159", form.q2.value);
+      data.append("entry.1596721985", form.q3.value);
+      data.append("entry.470060632", form.q4.value);
+      data.append("entry.1562340507", form.q5.value);
+      data.append("entry.178079086", score);
+
+      fetch("https://docs.google.com/forms/d/e/1FAIpQLSe2yhd61AxVfBtF0vxTzIT9fWXWlkAnIk9IfLBfqVgmpXms5g/formResponse", {
+        method: "POST",
+        mode: "no-cors",
+        body: data
+      }).then(() => {
+        Swal.fire("✅ Submitted!", `Your score was ${score}/5.`, "success");
+        form.reset();
+      }).catch(err => {
+        Swal.fire("❌ Error", "Could not submit the form. Try again.", "error");
+        console.error(err);
+      });
+    });
+  });
+</script>
+</body>
+</html>
