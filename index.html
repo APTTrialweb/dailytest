@@ -134,6 +134,12 @@
       background: #43a047;
     }
 
+    .question-image {
+      width: 100%;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+
     @media (max-width: 480px) {
       .container h1 {
         font-size: 1.4rem;
@@ -198,8 +204,9 @@
     <input type="date" name="testDate" required>
   </div>
 
-  <!-- MCQ Questions -->
+  <!-- Questions with Images -->
   <h3>Q1. What is the capital of France?</h3>
+  <img class="question-image" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Paris_Night.jpg" alt="Paris">
   <div class="input-group">
     <select name="q1" required>
       <option value="">Select</option>
@@ -211,6 +218,7 @@
   </div>
 
   <h3>Q2. What is 2 + 2?</h3>
+  <img class="question-image" src="https://imgs.search.brave.com/3oCph6KDihp9dU1-w4E1rr9LlERXd_da7bfKFMk5hTQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2M4L2U1/Lzc1L2M4ZTU3NTMz/NzBiYWQ1NGM3OTc3/ZDQ4NWUwYTBlMjlk/LmpwZw" alt="Math">
   <div class="input-group">
     <select name="q2" required>
       <option value="">Select</option>
@@ -222,6 +230,7 @@
   </div>
 
   <h3>Q3. Largest planet in solar system?</h3>
+  <img class="question-image" src="https://imgs.search.brave.com/YUVfQIaah4L0ou-XblHZZYMZDtpFCyI9BIEx4dk2ZFs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTI3/MTExNTI5MC92ZWN0/b3Ivc29sYXItc3lz/dGVtLXdpdGgtZ3Jh/ZGllbnQtcGxhbmV0/cy12ZWN0b3ItaWxs/dXN0cmF0aW9uLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz16/Vnh2OG8zSW0zUldG/NjQxdmthVVVXa1Jz/T0I3c2lITXZ4cjN1/NU9tV1hNPQ" alt="Jupiter">
   <div class="input-group">
     <select name="q3" required>
       <option value="">Select</option>
@@ -233,6 +242,7 @@
   </div>
 
   <h3>Q4. H₂O is the chemical formula for?</h3>
+  <img class="question-image" src="https://imgs.search.brave.com/6wkmJV1uwGSjLvgZpI8_LgzEk7kyZew3j349en462I0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi93YXRl/ci1oLW8tbW9sZWN1/bGUtc2tlbGV0YWwt/Zm9ybXVsYS0xODg0/MTQ4MDUuanBn" alt="Water molecule">
   <div class="input-group">
     <select name="q4" required>
       <option value="">Select</option>
@@ -244,6 +254,7 @@
   </div>
 
   <h3>Q5. Speed of light in vacuum?</h3>
+  <img class="question-image" src="https://imgs.search.brave.com/T6dYvKR3HeomVMI_um5cfYhVoju9him_rM4Nnxwxj8c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTg2/Njc4MDk4Ny9waG90/by9ibHVyLWZhc3Qt/bGlnaHQtc3VwZXIt/c3BlZWQtem9vbS10/by10YXJnZXQtdWx0/cmEtZW5lcmd5LWhp/Z2gtcGVyZm9ybWFu/Y2UtY29uY2VwdC1h/YnN0cmFjdC1mb3Iu/anBnP2I9MSZzPTYx/Mng2MTImdz0wJms9/MjAmYz1sazM1TERm/WDJ6cUxkYkF5N285/UE9pRmg0bHpteUQx/dGlveFRmcVN3UEFN/PQ" alt="Speed of light">
   <div class="input-group">
     <select name="q5" required>
       <option value="">Select</option>
@@ -314,10 +325,10 @@
         mode: "no-cors",
         body: data
       }).then(() => {
-        Swal.fire("✅ Submitted!", `Your score was ${score}/5.`, "success");
+        Swal.fire("\u2705 Submitted!", `Your score was ${score}/5.`, "success");
         form.reset();
       }).catch(err => {
-        Swal.fire("❌ Error", "Could not submit the form. Try again.", "error");
+        Swal.fire("\u274C Error", "Could not submit the form. Try again.", "error");
         console.error(err);
       });
     });
